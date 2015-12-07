@@ -10,7 +10,7 @@
         "url": "https://github.com/yuanyan/react-mq.git"
     },
     "dependencies": {
-        "react": "^0.12.0",
+        "react": "^0.14.0",
         "reactify": "^0.17.0"
     },
     "devDependencies": {
