@@ -9,8 +9,7 @@
         "type": "git",
         "url": "https://github.com/yuanyan/react-mq.git"
     },
-    "dependencies": {
-        "react": "^0.14.0",
+    "dependencies": {        
         "reactify": "^0.17.0"
     },
     "devDependencies": {
@@ -30,7 +29,8 @@
         "gulp-util": "^3.0.1",
         "merge-stream": "^0.1.6",
         "vinyl-source-stream": "^1.0.0",
-        "watchify": "^2.1.1"
+        "watchify": "^2.1.1",
+        "react": "^0.14.0",
     },
     "browserify": {
         "transform": [
