@@ -1,5 +1,7 @@
 var React = require('react');
-var matchMedia = typeof window !== 'undefined' ? window.matchMedia : null;
+var _matchMediaFunction = window && window.matchMedia && function (mediaQueryString) {
+  return window.matchMedia(mediaQueryString);
+};
 
 var globalMediaQueries = {};
 var globalMediaQueryList = {};
@@ -82,7 +84,7 @@ var Mixin = {
             mediaQueryLists[key] = {};
 
             var mediaQuery = mediaQueries[key];
-            var mql = matchMedia(mediaQuery);
+            var mql = _matchMediaFunction(mediaQuery);
             mediaQueryLists[key].mql = mql;
 
             // Create listener
@@ -109,8 +111,8 @@ var Mixin = {
             throw new Error('Invalid or missing Media Query');
         }
 
-        if(matchMedia){
-            this.mql = matchMedia(query);
+        if(_matchMediaFunction){
+            this.mql = _matchMediaFunction(query);
             this.mql.addListener(this.updateMatches);
             this.updateMatches();
         }
