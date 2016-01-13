@@ -12,7 +12,6 @@
     "dependencies": {        
     },
     "devDependencies": {
-        "reactify": "^0.17.0",
         "browserify": "^6.3.3",
         "browserify-shim": "^3.8.0",
         "chalk": "^0.5.1",
